@@ -1,5 +1,12 @@
+terraform {
+  backend "gcs" {
+    bucket  = "my-state-file-bucket"
+    prefix  = "terraform/state"  # Path inside the bucket
+  }
+}
+
 resource "google_storage_bucket" "my-bucket1" {
-  name                     = "terraform-cicd-pipeline-bucket"
+  name                     = "my_sixth_bucket_using_workflow"
   location                 = "US"
   force_destroy            = true
   project                  = "terraform-gcp-462915"
@@ -7,7 +14,7 @@ resource "google_storage_bucket" "my-bucket1" {
 }
 
 resource "google_storage_bucket" "my-bucket2" {
-  name                     = "my_sixth_bucket_using_workflow"
+  name                     = "my_seventh_bucket_using_workflow"
   location                 = "US"
   force_destroy            = true
   project                  = "terraform-gcp-462915"
