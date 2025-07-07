@@ -1,9 +1,3 @@
-terraform {
-  backend "gcs" {
-    bucket  = "my-state-file-bucket"
-    prefix  = "terraform/state"  # Path inside the bucket
-  }
-}
 
 resource "google_storage_bucket" "my-bucket1" {
   name                     = "my_sixth_bucket_using_workflow"
