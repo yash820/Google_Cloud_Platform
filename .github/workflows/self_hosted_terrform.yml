@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Self-Hosted-Runner-Terraform'
 
 on:
   push:
